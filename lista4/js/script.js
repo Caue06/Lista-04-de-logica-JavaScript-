@@ -44,14 +44,47 @@ exercicio03.addEventListener("click", () => {
     // 3) Crie um programa que exiba os números pares de 1 a 50 usando o loop "do-while".
 })
 
-exercicio04.addEventListener("click",()=>{
+exercicio04.addEventListener("click", () => {
+    res.innerHTML = ""
     let soma = 0
     let contadora = 1
-    do{
+    do {
         let numeroDigitado = parseFloat(prompt("Digite um número:"))
-        soma +=numeroDigitado
+        soma += numeroDigitado
         contadora++
-    }while(contadora < 6)
-        res.innerHTML = `A média dos número digitados é de ${soma/5}.` 
+    } while (contadora < 6)
+    res.innerHTML = `A média dos número digitados é de ${soma / 5}.`
     // 4) Faça um programa que leia 5 números inteiros usando o loop "do-while" e exiba a média aritmética dos valores lidos.
+})
+
+exercicio05.addEventListener("click", () => {
+    res.innerHTML = ""
+    let numeroDigitado = parseInt(prompt("Digite um número para ver a sua tabuada:"))
+    let contadora = 1
+    do {
+        let tabuada = numeroDigitado * contadora
+        res.innerHTML += `<p>${numeroDigitado} X ${contadora} = ${tabuada}</p>`
+        contadora++
+    } while (contadora < 11)
+
+    // 5) Escreva um programa que leia um número inteiro e exiba a tabuada desse número até o décimo valor usando o loop "do-while".
+})
+
+exercicio06.addEventListener("click", () => {
+    res.innerHTML = ""
+    let numeroDigitado = parseInt(prompt("Digite um número para ver os seus dvisores:"))
+    let contadora = 1
+    do {
+        if (numeroDigitado % contadora == 0) {
+            res.innerHTML += " " + contadora
+            contadora++
+        } else {
+            contadora++
+        }
+    } while (contadora < numeroDigitado)
+    // 6) Crie um programa que leia um número inteiro positivo e exiba todos os divisores desse número usando o loop "do-while".
+})
+
+exercicio07.addEventListener("click", ()=>{
+    // 7) Faça um programa que leia um número inteiro e exiba se ele é um número primo usando o loop "do-while".
 })
