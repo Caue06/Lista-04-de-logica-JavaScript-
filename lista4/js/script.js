@@ -112,7 +112,28 @@ exercicio07.addEventListener("click", () => {
 })
 
 exercicio08.addEventListener("click", () => {
-    
+    res.innerHTML = ""
+    let numero1 = 0
+    let numero2 = 1
+    let numeroDigitado = parseInt(prompt("Digite um número para ver sua sequência de fibonacci:"))
+
+    res.innerHTML += `${numero1} - ${numero2}`
+    let contadora = 0
+    do {
+        let soma = numero1 + numero2
+        res.innerHTML += ` - ${soma}`
+        numero1 = numero2
+        numero2 = soma
+        contadora++
+    } while (contadora < numeroDigitado - 2);
+    // while (contadora < numeroDigitado - 2) {
+    //     let soma = numero1 + numero2
+    //     res.innerHTML += ` - ${soma}`
+    //     numero1 = numero2
+    //     numero2 = soma
+    //     contadora++
+    // }
+
     // 8) Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido usando o loop "do-while".
 })
 
@@ -130,6 +151,18 @@ exercicio09.addEventListener("click", () => {
 })
 
 exercicio10.addEventListener("click", () => {
+    res.innerHTML = ""
+    let numero1 = 0
+    let numero2 = 1
+    res.innerHTML += `${numero1} - ${numero2}`
+    let contadora = 0
+    do {
+        let soma = numero1 + numero2
+        res.innerHTML += ` - ${soma}`
+        numero1 = numero2
+        numero2 = soma
+        contadora++
+    } while (contadora < 18);
     // 10) Faça um programa que exiba os primeiros 20 números da sequência de Fibonacci usando o loop "do-while".
 })
 
@@ -198,7 +231,7 @@ exercicio15.addEventListener("click", () => {
     } while (nomes != "fim");
     console.log(contadora)
 
-    res.innerHTML = `A média de idade das pessoas digitadas é de ${idades / (contadora-1)}`
+    res.innerHTML = `A média de idade das pessoas digitadas é de ${idades / (contadora - 1)}`
 
     // 15) Crie um programa que leia o nome e a idade de várias pessoas usando o loop "do-while" até que o nome "fim" seja informado. Ao final, exiba a média das idades.
 })
